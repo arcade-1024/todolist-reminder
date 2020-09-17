@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.App {
+	text-align: center;
+	overflow: hidden;
+	font-family: "Montserrat", sans-serif;
+	background-color: #f6f4fd;
+	&-bg-img-top {
+		max-width: 100%;
+		height: auto;
+		position: absolute;
+		left: 0;
+		// top: -20%;
+		z-index: -1;
+	}
+}
+@media (min-width: 1024px) {
+	.App {
+		&-bg-img-top {
+			top: -30%;
+		}
+	}
+}

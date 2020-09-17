@@ -1,0 +1,20 @@
+$purple-grad: #982aff;
+$blue-grad: #8ec5fc;
+.User {
+	padding: 2% 3%;
+	display: flex;
+	justify-content: space-between;
+	&-name {
+		text-align: left;
+	}
+	&-profile {
+		&-img {
+			height: 80px;
+			width: 70px;
+			background: linear-gradient(0deg, $purple-grad, $blue-grad);
+			padding: 5px;
+			border-radius: 15px;
+			box-shadow: 0 5px 10px rgba($purple-grad, 0.5);
+		}
+	}
+}

@@ -1,0 +1,53 @@
+$card-shadow: #ebc0fd;
+.reminder-card {
+	display: flex;
+	flex-direction: row;
+	margin: 25px 0;
+	padding: 1% 3%;
+	width: 100%;
+	min-height: 100px;
+	border-radius: 10px;
+	background-color: #fff;
+	text-align: left;
+	transition: all 0.5s;
+	position: relative;
+	overflow: hidden;
+	&:hover {
+		box-shadow: 0 10px 20px rgba($card-shadow, 0.7);
+	}
+	&-div {
+		width: 20%;
+		height: 100%;
+		background-color: $card-shadow;
+		border-radius: 50%;
+		&-img {
+			max-width: 100%;
+		}
+	}
+	&-main {
+		margin-left: 50px;
+	}
+	&-complete {
+		position: absolute;
+		right: -15%;
+		top: 0;
+		height: 100%;
+		width: 100px;
+		background-color: #43e97b;
+		transition: all 1s ease;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+			transform: translateX(-75px);
+		}
+		i {
+			font-size: 2rem;
+			color: #fff;
+		}
+	}
+}
+.completed {
+	opacity: 0.5;
+	text-decoration: line-through;
+}

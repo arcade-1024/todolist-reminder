@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.scss";
+import TodoList from "./pages/todolist/TodoList";
+import LoginPage from "./pages/loginPage/LoginPage";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	console.log(name);
+	return (
+		<div className="App">
+			<Router>
+				<Switch>
+					<Route
+						exact={true}
+						path="/"
+						component={() => (
+							<LoginPage setEmail={setEmail} setName={setName} name={name} email={email} />
+						)}
+					/>
+
+					<Route
+						path="/todolist"
+						component={() => <TodoList name={name} email={email} />}
+					/>
+				</Switch>
+			</Router>
+		</div>
+	);
 }
 
 export default App;

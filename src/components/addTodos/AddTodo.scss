@@ -1,0 +1,67 @@
+$purple-grad: #982aff;
+$blue-grad: #8ec5fc;
+.add-todo {
+	&-btn {
+		position: fixed;
+		right: 50px;
+		bottom: 50px;
+		height: 80px;
+		width: 80px;
+		border-radius: 50%;
+		outline: none;
+		border: none;
+		background: linear-gradient(0deg, $purple-grad, $blue-grad);
+		box-shadow: 0 5px 10px rgba($purple-grad, 0.5);
+		color: #fff;
+		z-index: 400;
+		&:focus,
+		&:active {
+			outline: none;
+		}
+		i {
+			font-size: 2.5rem;
+			text-shadow: 0 5px 10px rgba($blue-grad, 0.5);
+		}
+	}
+	&-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+	&-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 70%;
+		&-input {
+			border: none;
+			padding: 3px 3px;
+			border-bottom: 2px solid #000;
+			margin-top: 20px;
+			background: transparent;
+			&-title {
+				font-size: 1.3rem;
+				letter-spacing: 1px;
+				line-height: 1.4;
+			}
+			&-text-area {
+				font-size: 0.9rem;
+			}
+		}
+		&-btn {
+			margin-top: 20px;
+			padding: 2% 5%;
+			border-radius: 5px;
+			outline: none;
+			border: none;
+			background: linear-gradient(0deg, $purple-grad, $blue-grad);
+			box-shadow: 0 5px 10px rgba($purple-grad, 0.5);
+			color: #fff;
+			&:focus,
+			&:active {
+				outline: none;
+			}
+		}
+	}
+}

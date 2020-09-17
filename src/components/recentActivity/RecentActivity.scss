@@ -1,0 +1,17 @@
+.Recent {
+	padding: 0% 3%;
+
+	&-heading {
+		text-align: left;
+	}
+	&-task-container {
+		display: flex;
+		flex-direction: row;
+		padding: 2% 1%;
+		overflow-x: scroll;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}

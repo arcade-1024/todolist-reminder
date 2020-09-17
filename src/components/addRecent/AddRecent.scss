@@ -1,0 +1,44 @@
+$peach-grad: #f5576c;
+$light-pink-grad: #f093fb;
+.add-recent {
+	width: 10rem;
+	height: 100%;
+	margin-right: 40px;
+	background: linear-gradient(0deg, $peach-grad, $light-pink-grad);
+	border-radius: 15px;
+	box-shadow: 0 5px 15px $peach-grad;
+	padding: 2% 1% 0 1%;
+	&-img {
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		i {
+			font-size: 2rem;
+			background-color: #fff;
+			height: 80px;
+			width: 80px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0 5px 15px rgba($light-pink-grad, 0.7) /* f193fbc9 */;
+		}
+	}
+	&-title {
+		padding-top: 20px;
+		margin: 0;
+		color: #fff;
+		font-weight: 500;
+		padding-bottom: 10px;
+	}
+	&-form {
+		&-input {
+			border: none;
+			padding: 3px 3px;
+			border-bottom: 2px solid #000;
+			margin-top: 20px;
+			background: transparent;
+		}
+	}
+}
